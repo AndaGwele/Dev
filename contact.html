@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2a9d8f" />
+    <title>Contact Us | Anda Gwele Development</title>
+    <meta name="description"
+      content="Get in touch with Anda Gwele Development. Book a free consultation or send us a message. We'd love to hear about your project." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <link rel="icon" type="image/png" href="images/favion.png">
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- EmailJS SDK -->
+    <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <style>
+    /* quick inline validation styles (keep consistent with your design) */
+    .form-group.error input, .form-group.error select, .form-group.error textarea {
+      border-color: #d32f2f !important;
+    }
+    .error-message {
+      color: #d32f2f;
+      font-size: 0.875rem;
+      margin-top: 0.25rem;
+    }
+    .field-required {
+      color: #d32f2f;
+      font-size: 0.85rem;
+      margin-left: 0.25rem;
+    }
+    .btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  </style>
+  </head>
+  <body>
+    <!-- Navbar (unchanged) -->
+    <header class="navbar">
+      <nav class="navbar-inner">
+        <a href="index.html" class="navbar-logo"
+          aria-label="Anda Gwele Development Home">
+          <div class="navbar-logo-icon">AG</div>
+          <span class="navbar-logo-text">Anda Gwele Development</span>
+        </a>
+        <ul class="navbar-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="navbar-cta">Book a Free Consultation</a>
+        <button class="navbar-toggle" id="navbar-toggle"
+          aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path
+              stroke-linecap="round" stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+            style="display:none"><path stroke-linecap="round"
+              stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+      </nav>
+      <div class="navbar-mobile" id="navbar-mobile">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="packages.html">Packages</a>
+        <a href="process.html">Process</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="navbar-mobile-cta">Book a Free
+          Consultation</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <img src="images/banner3.jpg" alt class="hero-bg-img" />
+        <div class="container">
+          <span class="hero-label">Get in Touch</span>
+          <h1>Let's Start a Conversation</h1>
+          <p class="hero-description">Have a project in mind? We'd love to hear
+            about it. Send us a message or book a free consultation to discuss
+            your needs.</p>
+        </div>
+      </section>
+
+      <!-- Contact Section with EmailJS form -->
+      <section class="section section-bg">
+        <div class="container">
+          <div class="contact-grid">
+            <!-- Contact Info (unchanged) -->
+            <div class="contact-info">
+              <h3>How Can We Help?</h3>
+              <p>Whether you need a new website, a custom system, or just some
+                advice, we're here to help. Reach out and let's discuss your
+                project.</p>
+              <div class="contact-methods">
+                <div class="contact-method">
+                  <div class="contact-method-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                      height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round"><rect
+                        width="20" height="16" x="2" y="4" rx="2" /><path
+                        d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+                  </div>
+                  <div>
+                    <h4>Email Us</h4>
+                    <p>Andagwele1@gmail.com</p>
+                  </div>
+                </div>
+                <div class="contact-method">
+                  <div class="contact-method-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                      height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round"><path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+                  </div>
+                  <div>
+                    <h4>Call Us</h4>
+                    <p>+27 64 789 8126</p>
+                  </div>
+                </div>
+                <div class="contact-method">
+                  <div class="contact-method-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                      height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round"><path
+                        d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle
+                        cx="12" cy="10" r="3" /></svg>
+                  </div>
+                  <div>
+                    <h4>Visit Us</h4>
+                    <p>Makhanda, South Africa</p>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-hours">
+                <h4>Business Hours</h4>
+                <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                <p>Saturday: 9:00 AM - 1:00 PM</p>
+                <p>Sunday: Closed</p>
+              </div>
+            </div>
+
+            <!-- EmailJS powered form container -->
+            <div class="contact-form-wrapper" id="form-container">
+              <h3 style="margin-bottom: 1.5rem; font-size: 1.25rem;">Send Us a
+                Message</h3>
+              <form id="contact-form">
+                <div class="form-row">
+                  <div class="form-group" id="group-firstName">
+                    <label for="firstName">First Name *</label>
+                    <input type="text" id="firstName" name="firstName" required
+                      placeholder="Your first name" />
+                  </div>
+                  <div class="form-group" id="group-lastName">
+                    <label for="lastName">Last Name *</label>
+                    <input type="text" id="lastName" name="lastName" required
+                      placeholder="Your last name" />
+                  </div>
+                </div>
+                <div class="form-group" id="group-company">
+                  <label for="company">Company Name *</label>
+                  <input type="text" id="company" name="company" required
+                    placeholder="Your company name " />
+                </div>
+                <div class="form-group" id="group-email">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" required
+                    placeholder="your@email.com" />
+                </div>
+                <div class="form-group" id="group-phone">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone"
+                    placeholder="+27 12 345 6789" />
+                </div>
+                <div class="form-group" id="group-service">
+                  <label for="service">What service are you interested in?
+                    *</label>
+                  <select id="service" name="service" required>
+                    <option value disabled selected>Select a service</option>
+                    <option value="website">Business Website</option>
+                    <option value="custom">Custom System</option>
+                    <option value="redesign">Website Redesign</option>
+                    <option value="academic">Academic System</option>
+                    <option value="maintenance">Maintenance & Support</option>
+                    <option value="other">Something Else</option>
+                  </select>
+                </div>
+                <div class="form-group" id="group-message">
+                  <label for="message">Tell us about your project *</label>
+                  <textarea id="message" name="message" required
+                    placeholder="Describe your project, goals, and any specific requirements..."></textarea>
+                </div>
+                <!-- honeypot field for bot detection (hidden) -->
+                <input type="text" name="_gotcha"
+                  style="display:none !important" tabindex="-1"
+                  autocomplete="off" />
+                <button type="submit" class="btn btn-primary"
+                  style="width: 100%; justify-content: center;" id="submit-btn">
+                  Send Message
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"><path d="M22 2 11 13" /><path
+                      d="m22 2-7 20-4-9-9-4 20-7z" /></svg>
+                </button>
+                <div id="form-global-error"
+                  style="color:#d32f2f; margin-top:0.5rem; font-size:0.9rem;"></div>
+              </form>
+            </div>
+
+            <!-- Success message (hidden initially) -->
+            <div class="contact-form-wrapper form-success" id="form-success"
+              style="display: none;">
+              <div class="form-success-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"><path
+                    d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><path
+                    d="m9 11 3 3L22 4" /></svg>
+              </div>
+              <h3>Message Sent Successfully!</h3>
+              <p>Thank you for reaching out. We've received your message and
+                will get back to you within 24 hours.</p>
+              <button type="button" class="btn btn-primary" id="form-reset">Send
+                Another Message</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ (unchanged) -->
+      <section class="section">
+        <div class="container-sm">
+          <div class="section-heading center">
+            <span class="label">FAQ</span>
+            <h2>Frequently Asked Questions</h2>
+            <p>Got questions? We've got answers. If you don't find what you're
+              looking for, feel free to contact us.</p>
+          </div>
+          <div class="values-grid" style="margin-top: 2rem;">
+            <div class="value-card"><h3>How much does a website cost?</h3><p>Our
+                website packages start from affordable rates for small
+                businesses. The final cost depends on your specific
+                requirements. Contact us for a free quote tailored to your
+                needs.</p></div>
+            <div class="value-card"><h3>How long does it take to build a
+                website?</h3><p>A typical business website takes 2-4 weeks from
+                start to finish. More complex projects with custom features may
+                take longer. We'll give you a clear timeline during our initial
+                consultation.</p></div>
+            <div class="value-card"><h3>Do you offer payment plans?</h3><p>Yes,
+                we understand that cash flow is important for small businesses.
+                We offer flexible payment plans, typically with a deposit
+                upfront and the balance spread over the project
+                duration.</p></div>
+            <div class="value-card"><h3>What happens after my website is
+                launched?</h3><p>We offer ongoing maintenance and support
+                packages to keep your website secure, up-to-date, and running
+                smoothly. We're always here to help with updates, fixes, and
+                improvements.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA (unchanged) -->
+      <section class="cta-section">
+        <div class="container-sm">
+          <h2>Prefer to Talk?</h2>
+          <p>Sometimes it's easier to discuss your project over the phone. Give
+            us a call or book a free consultation at a time that works for
+            you.</p>
+          <div class="cta-buttons">
+            <a href="tel:0647898126" class="btn btn-light">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round"><path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+              Call Us Now
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <a href="index.html" class="navbar-logo"
+              aria-label="Anda Gwele Development Home">
+              <div class="navbar-logo-icon">AG</div>
+              <span class="navbar-logo-text" style="color:#f8f7f4">Anda Gwele
+                Development</span>
+            </a>
+            <p>Building affordable, high-quality digital solutions for growing
+              organisations across South Africa.</p>
+          </div>
+          <div><h4>Company</h4><ul class="footer-links"><li><a
+                  href="about.html">About Us</a></li><li><a
+                  href="services.html">Services</a></li><li><a
+                  href="packages.html">Packages</a></li><li><a
+                  href="process.html">Our Process</a></li></ul></div>
+          <div><h4>Services</h4><ul class="footer-links"><li><a
+                  href="services.html#websites">Business Websites</a></li><li><a
+                  href="services.html#systems">Custom Systems</a></li><li><a
+                  href="services.html#redesigns">Website
+                  Redesigns</a></li><li><a
+                  href="services.html#academic">Academic
+                  Systems</a></li></ul></div>
+          <div><h4>Get in Touch</h4><ul class="footer-contact"><li><svg
+                  xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"><rect width="20" height="16" x="2"
+                    y="4" rx="2" /><path
+                    d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+                andagwele1@gmail.com</li><li><svg
+                  xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"><path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+                +27 64 789 8126</li><li><svg xmlns="http://www.w3.org/2000/svg"
+                  width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"><path
+                    d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle
+                    cx="12" cy="10" r="3" /></svg> Makhanda, South
+                Africa</li></ul></div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; <span id="copyright-year"></span> Anda Gwele Development.
+            All rights reserved.</p>
+          <div class="footer-bottom-links"><a
+              href="docs/privacy_policy.pdf">Privacy
+              Policy</a><a href="docs/Terms.docx">Terms of Service</a></div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Main JS with EmailJS integration -->
+    <script>
+    (function() {
+      // -------- INIT EMAILJS ----------
+     emailjs.init({
+  publicKey: "qIqNbuv0JqN_XXLWR",
+});
+
+      // -------- DOM elements -------------
+      const form = document.getElementById('contact-form');
+      const formContainer = document.getElementById('form-container');
+      const successDiv = document.getElementById('form-success');
+      const submitBtn = document.getElementById('submit-btn');
+      const globalErrorDiv = document.getElementById('form-global-error');
+
+    
+      const SERVICE_ID = "service_y3owyps";   
+      const TEMPLATE_ID = "template_aflcq47"; 
+
+      // field groups for error highlighting
+      const fieldGroups = {
+        firstName: document.getElementById('group-firstName'),
+        lastName: document.getElementById('group-lastName'),
+        email: document.getElementById('group-email'),
+        phone: document.getElementById('group-phone'),
+        service: document.getElementById('group-service'),
+        company: document.getElementById('group-company'),
+        message: document.getElementById('group-message')
+      };
+
+      // Helper: remove error style from all groups
+      function clearFieldErrors() {
+        Object.values(fieldGroups).forEach(g => {
+          if (g) {
+            g.classList.remove('error');
+            const existingMsg = g.querySelector('.error-message');
+            if (existingMsg) existingMsg.remove();
+          }
+        });
+        if (globalErrorDiv) globalErrorDiv.innerText = '';
+      }
+      // Real-time error recovery
+function attachLiveValidation() {
+  Object.keys(fieldGroups).forEach(fieldName => {
+    const input = document.getElementById(fieldName);
+    if (!input) return;
+
+    input.addEventListener('input', function() {
+      if (input.value.trim() !== '') {
+        const group = fieldGroups[fieldName];
+        if (group) {
+          group.classList.remove('error');
+          const msg = group.querySelector('.error-message');
+          if (msg) msg.remove();
+        }
+      }
+    });
+
+    // For select dropdown
+    if (input.tagName === 'SELECT') {
+      input.addEventListener('change', function() {
+        if (input.value) {
+          const group = fieldGroups[fieldName];
+          if (group) {
+            group.classList.remove('error');
+            const msg = group.querySelector('.error-message');
+            if (msg) msg.remove();
+          }
+        }
+      });
+    }
+  });
+}
+
+      // Helper: show error on a specific field
+      function showFieldError(fieldName, message) {
+        const group = fieldGroups[fieldName];
+        if (group) {
+          group.classList.add('error');
+          // avoid duplicate messages
+          let errMsg = group.querySelector('.error-message');
+          if (!errMsg) {
+            errMsg = document.createElement('div');
+            errMsg.className = 'error-message';
+            group.appendChild(errMsg);
+          }
+          errMsg.innerText = message;
+        }
+      }
+
+      // -------- XSS Prevention: sanitize strings (DOMPurify not included, use simple escape)
+      function escapeHTML(str) {
+        if (!str) return '';
+        return String(str)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      // Before sending to EmailJS, we create a copy of the data with sanitized fields
+      function getSanitizedFormData() {
+        const firstName = escapeHTML(document.getElementById('firstName').value.trim());
+        const lastName = escapeHTML(document.getElementById('lastName').value.trim());
+        const company = escapeHTML(document.getElementById('company').value.trim());
+        const email = escapeHTML(document.getElementById('email').value.trim());
+        const phone = escapeHTML(document.getElementById('phone').value.trim());
+        const service = escapeHTML(document.getElementById('service').value);
+        const message = escapeHTML(document.getElementById('message').value.trim());
+
+       return { firstName, lastName, company, email, phone, service, message };
+      }
+
+      // -------- Form Validation (client-side) ----------
+      function validateForm() {
+  clearFieldErrors();
+  let isValid = true;
+
+  const fields = [
+    { id: 'firstName', message: 'First name is required.' },
+    { id: 'lastName', message: 'Last name is required.' },
+    { id: 'company', message: 'Company name is required.' },
+    { id: 'email', message: 'Email address is required.' },
+    { id: 'phone', message: 'Phone number is required.' },
+    { id: 'service', message: 'Please select a service.' },
+    { id: 'message', message: 'Message cannot be blank.' }
+  ];
+
+  fields.forEach(field => {
+    const input = document.getElementById(field.id);
+    const value = input.value.trim();
+
+    if (!value) {
+      showFieldError(field.id, field.message);
+      isValid = false;
+    }
+  });
+
+  // Email format validation
+  const emailValue = document.getElementById('email').value.trim();
+  if (emailValue && !/^\S+@\S+\.\S+$/.test(emailValue)) {
+    showFieldError('email', 'Enter a valid email address.');
+    isValid = false;
+  }
+
+  // Honeypot check
+  const gotcha = document.querySelector('input[name="_gotcha"]');
+  if (gotcha && gotcha.value !== '') {
+    isValid = false;
+  }
+
+  return isValid;
+}
+      // -------- Form submit handler ----------
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();   // block traditional submission
+
+        // Reset global error
+        if (globalErrorDiv) globalErrorDiv.innerText = '';
+
+        // Validate
+        if (!validateForm()) {
+          return; // stop if invalid
+        }
+
+        // Disable button during sending
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Sending...';
+
+        // Get sanitized data (XSS safe)
+        const data = getSanitizedFormData();
+
+        // Prepare parameters for EmailJS (match template variables)
+        const templateParams = {
+          first_name: data.firstName,
+          last_name: data.lastName,
+          email: data.email,
+          company: data.company || 'not provided',
+          phone: data.phone || 'not provided',
+          service: data.service, 
+          message: data.message,
+          // optional: reply_to etc.
+          reply_to: data.email
+        };
+
+        // Send via EmailJS
+        emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams)
+          .then(function(response) {
+            // success
+            formContainer.style.display = 'none';
+            successDiv.style.display = 'block';
+            // reset form fields (but keep hidden)
+            form.reset();
+            clearFieldErrors();
+          })
+          .catch(function(error) {
+            console.error('EmailJS error:', error);
+            globalErrorDiv.innerText = 'Failed to send message. Please try again later or contact us directly.';
+          })
+          .finally(function() {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = `Send Message <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13" /><path d="m22 2-7 20-4-9-9-4 20-7z" /></svg>`;
+          });
+      });
+
+      // -------- Reset / "Send another message" ---------
+      document.getElementById('form-reset').addEventListener('click', function() {
+        formContainer.style.display = 'block';
+        successDiv.style.display = 'none';
+        clearFieldErrors();
+        // small reset: clear any global message
+        if (globalErrorDiv) globalErrorDiv.innerText = '';
+      });
+
+      // -------- copyright year dynamic ----------
+      document.getElementById('copyright-year').innerText = new Date().getFullYear();
+
+      // -------- mobile menu toggle (keep original if needed) ----------
+      const toggleBtn = document.getElementById('navbar-toggle');
+      const mobileMenu = document.getElementById('navbar-mobile');
+      if (toggleBtn && mobileMenu) {
+        toggleBtn.addEventListener('click', function() {
+          const expanded = toggleBtn.getAttribute('aria-expanded') === 'true' ? false : true;
+          toggleBtn.setAttribute('aria-expanded', expanded);
+          mobileMenu.classList.toggle('active');
+          // optionally toggle icons
+        });
+      }
+    })();
+  </script>
+    <!-- link to external main.js for other functionality (optional) -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
